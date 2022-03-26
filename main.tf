@@ -65,7 +65,7 @@ resource "aci_application_epg" "epg" {
   name         = var.name
   pref_gr_memb = "include"
 
-  application_profile_dn = "${var.tenant_dn}/app-network"
+  application_profile_dn = var.anp_dn
   relation_fv_rs_bd      = aci_bridge_domain.bd.id
 
   relation_fv_rs_cons = var.public ? [data.aci_contract.wan.id] : []

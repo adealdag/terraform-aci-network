@@ -13,6 +13,11 @@ variable "vrf_dn" {
   description = "Distinguised Name (DN) of parent VRF"
 }
 
+variable "anp_dn" {
+  type        = string
+  description = "Distinguised Name (DN) of parent App Network Profile where the EPG will be deployed"
+}
+
 variable "type" {
   type    = string
   default = "L2"
